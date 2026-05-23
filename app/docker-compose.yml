@@ -1,0 +1,35 @@
+services:
+  producer:
+    build: .
+    command: python Producer.py
+    networks:
+      - kafka_shared_network
+
+  single-consumer:
+    build: .
+    command: python SingleMessageConsumer.py
+    networks:
+      - kafka_shared_network
+    volumes:
+      - single_consumer_logs:/app/logs
+    deploy:
+      replicas: 2
+
+  batch-consumer:
+    build: .
+    command: python BatchMessageConsumer.py
+    networks:
+      - kafka_shared_network
+    volumes:
+      - batch_consumer_logs:/app/logs
+    deploy:
+      replicas: 2
+        
+networks:
+  kafka_shared_network:
+    external: true
+    name: docker_kafka_shared_net
+
+volumes:
+  single_consumer_logs:
+  batch_consumer_logs:
