@@ -24,10 +24,7 @@ conf = {
     "group.id": "batch-consumer-group",
     "auto.offset.reset": "earliest",
     # Настройка для ручного коммита сообщений
-    "enable.auto.commit": False,
-    # Настройки размера вычитки и максимального времени ожидания для вычитки по 10 сообщений
-    "fetch.min.bytes": 1100,
-    "fetch.wait.max.ms": 10500
+    "enable.auto.commit": False
 }
 # Создание консьюмера
 consumer = Consumer(conf)
@@ -39,25 +36,50 @@ consumer.subscribe(["my-topic"])
 key_deserializer = IntegerDeserializer()
 value_deserializer = StringDeserializer('utf-8')
 
+# Задаём количество сообщений в пачке
+batch_size = 10
+# Буфер для накопления кол-ва сообщений, равного batch_size
+msg_buffer = []
 # Чтение сообщений в бесконечном цикле
 try:
     while True:
-        # Получение сообщений раз в 0,1с
-        msg = consumer.poll(0.1)
-
-        if msg is None:
-            continue
-        if msg.error():
-            logger.error(f"Ошибка: {msg.error()}")
+        # Получение до 10 сообщений за раз с таймаутом 0.1с
+        messages = consumer.consume(num_messages=batch_size-len(msg_buffer), timeout=0.1)
+        # Если за timeout вообще ничего не пришло, идем на следующий цикл (наш продюсер отправляет раз в 1 секунду)
+        if not messages:
             continue
 
-        #key = msg.key().decode("utf-8")
-        #value = msg.value().decode("utf-8")
-        key = key_deserializer(msg.key(), SerializationContext(msg.topic(), MessageField.KEY))
-        value = value_deserializer(msg.value(), SerializationContext(msg.topic(), MessageField.VALUE))
-        logger.info(f"Получено сообщение: {key=}, {value=}, offset={msg.offset()}")
-        # Ручной коммит после обработки сообщения
-        consumer.commit(msg, asynchronous=False)
+        for msg in messages:
+            if msg.error():
+                logger.error(f"Ошибка: {msg.error()}")
+                continue        
+            # Добавляем сообщение в буфер
+            msg_buffer.append(msg)
+        # Если буфер еще не полон — идем на следующий цикл consume()
+        if len(msg_buffer) < batch_size:
+            continue
+
+        # Обработка полученной пачки сообщений
+        messages_in_batch = []
+        for msg in msg_buffer:
+            try:
+                # Десериализация
+                key = key_deserializer(msg.key(), SerializationContext(msg.topic(), MessageField.KEY))
+                value = value_deserializer(msg.value(), SerializationContext(msg.topic(), MessageField.VALUE))
+                logger.info(f"Получено сообщение: {key=}, {value=}, offset={msg.offset()}")
+                # Добавляем сообщение в список для последующего коммита
+                messages_in_batch.append(msg)
+            except Exception as deserializer_error:
+                logger.error(f"Ошибка десериализации сообщения на оффсете {msg.offset()}: {deserializer_error}")
+                messages_in_batch.append(msg)
+        # Один коммит последнего сообщения в пачке после обработки всей пачки сообщений 
+        if messages_in_batch:
+            consumer.commit(message=messages_in_batch[-1], asynchronous=False)
+            logger.info(f"Успешный коммит {len(messages_in_batch)} сообщений")
+        # Очистка буфера
+        msg_buffer.clear()
+except Exception as e:
+    logger.error(f"Критическая ошибка консьюмера: {e}")
 finally:
     # Закрытие консьюмера
     consumer.close()
