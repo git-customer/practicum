@@ -846,98 +846,75 @@ producer-1  | Сообщение доставлено в топик my-topic и 
 producer-1  | Сообщение доставлено в топик my-topic и партицию 0
 producer-1  | Сообщение доставлено в топик my-topic и партицию 2
 producer-1  | Сообщение доставлено в топик my-topic и партицию 0
-producer-1  | Сообщение доставлено в топик my-topic и партицию 2
-producer-1  | Сообщение доставлено в топик my-topic и партицию 0
-producer-1  | Сообщение доставлено в топик my-topic и партицию 2
-producer-1  | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-2  | 2026-05-23 05:28:09,641 INFO: Получено сообщение: key=1, value='Сообщение 1', offset=0
-single-consumer-1  | 2026-05-23 05:28:09,684 INFO: Получено сообщение: key=2, value='Сообщение 2', offset=0
-single-consumer-2  | 2026-05-23 05:28:09,796 INFO: Получено сообщение: key=3, value='Сообщение 3', offset=1
-single-consumer-1  | 2026-05-23 05:28:09,800 INFO: Получено сообщение: key=4, value='Сообщение 4', offset=1
-single-consumer-2  | 2026-05-23 05:28:09,845 INFO: Получено сообщение: key=5, value='Сообщение 5', offset=2
-single-consumer-1  | 2026-05-23 05:28:09,856 INFO: Получено сообщение: key=6, value='Сообщение 6', offset=2
-single-consumer-2  | 2026-05-23 05:28:09,907 INFO: Получено сообщение: key=7, value='Сообщение 7', offset=3
-single-consumer-1  | 2026-05-23 05:28:09,918 INFO: Получено сообщение: key=8, value='Сообщение 8', offset=3
-single-consumer-2  | 2026-05-23 05:28:09,951 INFO: Получено сообщение: key=9, value='Сообщение 9', offset=4
-single-consumer-1  | 2026-05-23 05:28:09,967 INFO: Получено сообщение: key=10, value='Сообщение 10', offset=0
-single-consumer-1  | 2026-05-23 05:28:10,262 INFO: Получено сообщение: key=11, value='Сообщение 11', offset=4
+single-consumer-2  | 2026-05-24 13:47:24,358 INFO: Получено сообщение: key=2, value='Сообщение 2', offset=0
+
+single-consumer-1  | 2026-05-24 13:47:24,361 INFO: Получено сообщение: key=1, value='Сообщение 1', offset=0
+single-consumer-2  | 2026-05-24 13:47:24,369 INFO: Получено сообщение: key=4, value='Сообщение 4', offset=1
+single-consumer-2  | 2026-05-24 13:47:24,378 INFO: Получено сообщение: key=6, value='Сообщение 6', offset=2
+
+
+single-consumer-1  | 2026-05-24 13:47:24,372 INFO: Получено сообщение: key=3, value='Сообщение 3', offset=1
+single-consumer-1  | 2026-05-24 13:47:24,379 INFO: Получено сообщение: key=5, value='Сообщение 5', offset=2
+single-consumer-1  | 2026-05-24 13:47:24,398 INFO: Получено сообщение: key=7, value='Сообщение 7', offset=3
+producer-1         | Сообщение доставлено в топик my-topic и партицию 2
+single-consumer-2  | 2026-05-24 13:47:25,040 INFO: Получено сообщение: key=8, value='Сообщение 8', offset=3
 producer-1         | Сообщение доставлено в топик my-topic и партицию 0
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-1  | 2026-05-23 05:28:11,285 INFO: Получено сообщение: key=12, value='Сообщение 12', offset=1
-single-consumer-1  | 2026-05-23 05:28:12,296 INFO: Получено сообщение: key=13, value='Сообщение 13', offset=2
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-2  | 2026-05-23 05:28:13,314 INFO: Получено сообщение: key=14, value='Сообщение 14', offset=5
+single-consumer-1  | 2026-05-24 13:47:26,032 INFO: Получено сообщение: key=9, value='Сообщение 9', offset=4
 producer-1         | Сообщение доставлено в топик my-topic и партицию 2
-single-consumer-1  | 2026-05-23 05:28:14,326 INFO: Получено сообщение: key=15, value='Сообщение 15', offset=3
+single-consumer-2  | 2026-05-24 13:47:27,042 INFO: Получено сообщение: key=10, value='Сообщение 10', offset=0
 producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-1  | 2026-05-23 05:28:15,341 INFO: Получено сообщение: key=16, value='Сообщение 16', offset=5
+single-consumer-2  | 2026-05-24 13:47:28,033 INFO: Получено сообщение: key=11, value='Сообщение 11', offset=4
 producer-1         | Сообщение доставлено в топик my-topic и партицию 0
-single-consumer-2  | 2026-05-23 05:28:16,352 INFO: Получено сообщение: key=17, value='Сообщение 17', offset=6
+single-consumer-2  | 2026-05-24 13:47:29,034 INFO: Получено сообщение: key=12, value='Сообщение 12', offset=1
+producer-1         | Сообщение доставлено в топик my-topic и партицию 1
+single-consumer-2  | 2026-05-24 13:47:30,049 INFO: Получено сообщение: key=13, value='Сообщение 13', offset=2
+producer-1         | Сообщение доставлено в топик my-topic и партицию 1
+single-consumer-1  | 2026-05-24 13:47:31,034 INFO: Получено сообщение: key=14, value='Сообщение 14', offset=5
 producer-1         | Сообщение доставлено в топик my-topic и партицию 2
-single-consumer-1  | 2026-05-23 05:28:17,372 INFO: Получено сообщение: key=18, value='Сообщение 18', offset=4
+single-consumer-2  | 2026-05-24 13:47:32,034 INFO: Получено сообщение: key=15, value='Сообщение 15', offset=3
 producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-producer-1         | Сообщение доставлено в топик my-topic и партицию 2
-single-consumer-2  | 2026-05-23 05:28:18,391 INFO: Получено сообщение: key=19, value='Сообщение 19', offset=7
-single-consumer-1  | 2026-05-23 05:28:19,400 INFO: Получено сообщение: key=20, value='Сообщение 20', offset=5
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-batch-consumer-1   | 2026-05-23 05:28:20,407 INFO: Получено сообщение: key=1, value='Сообщение 1', offset=0
-batch-consumer-2   | 2026-05-23 05:28:20,415 INFO: Получено сообщение: key=2, value='Сообщение 2', offset=0
-single-consumer-1  | 2026-05-23 05:28:20,427 INFO: Получено сообщение: key=21, value='Сообщение 21', offset=6
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-batch-consumer-1   | 2026-05-23 05:28:20,441 INFO: Получено сообщение: key=3, value='Сообщение 3', offset=1
-batch-consumer-2   | 2026-05-23 05:28:20,460 INFO: Получено сообщение: key=4, value='Сообщение 4', offset=1
-batch-consumer-1   | 2026-05-23 05:28:20,475 INFO: Получено сообщение: key=5, value='Сообщение 5', offset=2
-batch-consumer-2   | 2026-05-23 05:28:20,486 INFO: Получено сообщение: key=6, value='Сообщение 6', offset=2
-batch-consumer-1   | 2026-05-23 05:28:20,496 INFO: Получено сообщение: key=7, value='Сообщение 7', offset=3
-batch-consumer-2   | 2026-05-23 05:28:20,512 INFO: Получено сообщение: key=8, value='Сообщение 8', offset=3
-batch-consumer-1   | 2026-05-23 05:28:20,524 INFO: Получено сообщение: key=9, value='Сообщение 9', offset=4
-batch-consumer-2   | 2026-05-23 05:28:20,537 INFO: Получено сообщение: key=11, value='Сообщение 11', offset=4
-batch-consumer-1   | 2026-05-23 05:28:20,550 INFO: Получено сообщение: key=14, value='Сообщение 14', offset=5
-batch-consumer-2   | 2026-05-23 05:28:20,561 INFO: Получено сообщение: key=16, value='Сообщение 16', offset=5
-batch-consumer-1   | 2026-05-23 05:28:20,577 INFO: Получено сообщение: key=17, value='Сообщение 17', offset=6
-batch-consumer-2   | 2026-05-23 05:28:20,589 INFO: Получено сообщение: key=10, value='Сообщение 10', offset=0
-batch-consumer-1   | 2026-05-23 05:28:20,601 INFO: Получено сообщение: key=19, value='Сообщение 19', offset=7
-batch-consumer-2   | 2026-05-23 05:28:20,621 INFO: Получено сообщение: key=12, value='Сообщение 12', offset=1
-batch-consumer-2   | 2026-05-23 05:28:20,640 INFO: Получено сообщение: key=13, value='Сообщение 13', offset=2
-batch-consumer-2   | 2026-05-23 05:28:20,651 INFO: Получено сообщение: key=15, value='Сообщение 15', offset=3
-batch-consumer-2   | 2026-05-23 05:28:20,666 INFO: Получено сообщение: key=18, value='Сообщение 18', offset=4
-batch-consumer-2   | 2026-05-23 05:28:20,680 INFO: Получено сообщение: key=20, value='Сообщение 20', offset=5
-batch-consumer-2   | 2026-05-23 05:28:20,707 INFO: Получено сообщение: key=21, value='Сообщение 21', offset=6
-single-consumer-1  | 2026-05-23 05:28:21,438 INFO: Получено сообщение: key=22, value='Сообщение 22', offset=6
+batch-consumer-1   | 2026-05-24 13:47:33,037 INFO: Получено сообщение: key=2, value='Сообщение 2', offset=0
+batch-consumer-1   | 2026-05-24 13:47:33,038 INFO: Получено сообщение: key=4, value='Сообщение 4', offset=1
+single-consumer-2  | 2026-05-24 13:47:33,044 INFO: Получено сообщение: key=16, value='Сообщение 16', offset=5
+batch-consumer-1   | 2026-05-24 13:47:33,038 INFO: Получено сообщение: key=6, value='Сообщение 6', offset=2
+batch-consumer-1   | 2026-05-24 13:47:33,048 INFO: Получено сообщение: key=8, value='Сообщение 8', offset=3
+batch-consumer-1   | 2026-05-24 13:47:33,055 INFO: Получено сообщение: key=10, value='Сообщение 10', offset=0
+batch-consumer-1   | 2026-05-24 13:47:33,056 INFO: Получено сообщение: key=11, value='Сообщение 11', offset=4
+batch-consumer-1   | 2026-05-24 13:47:33,061 INFO: Получено сообщение: key=12, value='Сообщение 12', offset=1
+batch-consumer-1   | 2026-05-24 13:47:33,062 INFO: Получено сообщение: key=13, value='Сообщение 13', offset=2
+batch-consumer-1   | 2026-05-24 13:47:33,070 INFO: Получено сообщение: key=15, value='Сообщение 15', offset=3
+batch-consumer-1   | 2026-05-24 13:47:33,072 INFO: Получено сообщение: key=16, value='Сообщение 16', offset=5
+batch-consumer-1   | 2026-05-24 13:47:33,096 INFO: Успешный коммит 10 сообщений
 producer-1         | Сообщение доставлено в топик my-topic и партицию 0
-single-consumer-1  | 2026-05-23 05:28:22,451 INFO: Получено сообщение: key=23, value='Сообщение 23', offset=7
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-1  | 2026-05-23 05:28:23,472 INFO: Получено сообщение: key=24, value='Сообщение 24', offset=8
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
+single-consumer-1  | 2026-05-24 13:47:34,036 INFO: Получено сообщение: key=17, value='Сообщение 17', offset=6
 producer-1         | Сообщение доставлено в топик my-topic и партицию 2
-single-consumer-2  | 2026-05-23 05:28:24,481 INFO: Получено сообщение: key=25, value='Сообщение 25', offset=8
-producer-1         | Сообщение доставлено в топик my-topic и партицию 2
-single-consumer-2  | 2026-05-23 05:28:25,495 INFO: Получено сообщение: key=26, value='Сообщение 26', offset=9
+single-consumer-2  | 2026-05-24 13:47:35,077 INFO: Получено сообщение: key=18, value='Сообщение 18', offset=4
 producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-1  | 2026-05-23 05:28:26,502 INFO: Получено сообщение: key=27, value='Сообщение 27', offset=9
+single-consumer-1  | 2026-05-24 13:47:36,037 INFO: Получено сообщение: key=19, value='Сообщение 19', offset=7
+producer-1         | Сообщение доставлено в топик my-topic и партицию 2
+single-consumer-2  | 2026-05-24 13:47:37,037 INFO: Получено сообщение: key=20, value='Сообщение 20', offset=5
+producer-1         | Сообщение доставлено в топик my-topic и партицию 1
+single-consumer-2  | 2026-05-24 13:47:38,038 INFO: Получено сообщение: key=21, value='Сообщение 21', offset=6
+producer-1         | Сообщение доставлено в топик my-topic и партицию 1
+single-consumer-2  | 2026-05-24 13:47:39,040 INFO: Получено сообщение: key=22, value='Сообщение 22', offset=6
 producer-1         | Сообщение доставлено в топик my-topic и партицию 0
-single-consumer-1  | 2026-05-23 05:28:27,513 INFO: Получено сообщение: key=28, value='Сообщение 28', offset=7
-single-consumer-1  | 2026-05-23 05:28:28,523 INFO: Получено сообщение: key=29, value='Сообщение 29', offset=10
+single-consumer-2  | 2026-05-24 13:47:40,040 INFO: Получено сообщение: key=23, value='Сообщение 23', offset=7
 producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-2  | 2026-05-23 05:28:29,544 INFO: Получено сообщение: key=30, value='Сообщение 30', offset=10
+single-consumer-2  | 2026-05-24 13:47:41,040 INFO: Получено сообщение: key=24, value='Сообщение 24', offset=8
+producer-1         | Сообщение доставлено в топик my-topic и партицию 1
+single-consumer-1  | 2026-05-24 13:47:42,043 INFO: Получено сообщение: key=25, value='Сообщение 25', offset=8
 producer-1         | Сообщение доставлено в топик my-topic и партицию 2
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-1  | 2026-05-23 05:28:30,557 INFO: Получено сообщение: key=31, value='Сообщение 31', offset=11
-batch-consumer-1   | 2026-05-23 05:28:30,912 INFO: Получено сообщение: key=25, value='Сообщение 25', offset=8
-batch-consumer-1   | 2026-05-23 05:28:30,926 INFO: Получено сообщение: key=26, value='Сообщение 26', offset=9
-batch-consumer-2   | 2026-05-23 05:28:30,933 INFO: Получено сообщение: key=22, value='Сообщение 22', offset=6
-batch-consumer-1   | 2026-05-23 05:28:30,945 INFO: Получено сообщение: key=30, value='Сообщение 30', offset=10
-batch-consumer-2   | 2026-05-23 05:28:30,951 INFO: Получено сообщение: key=28, value='Сообщение 28', offset=7
-batch-consumer-2   | 2026-05-23 05:28:30,965 INFO: Получено сообщение: key=23, value='Сообщение 23', offset=7
-batch-consumer-2   | 2026-05-23 05:28:30,975 INFO: Получено сообщение: key=24, value='Сообщение 24', offset=8
-batch-consumer-2   | 2026-05-23 05:28:30,993 INFO: Получено сообщение: key=27, value='Сообщение 27', offset=9
-batch-consumer-2   | 2026-05-23 05:28:31,007 INFO: Получено сообщение: key=29, value='Сообщение 29', offset=10
-batch-consumer-2   | 2026-05-23 05:28:31,024 INFO: Получено сообщение: key=31, value='Сообщение 31', offset=11
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-1  | 2026-05-23 05:28:31,578 INFO: Получено сообщение: key=32, value='Сообщение 32', offset=12
-single-consumer-1  | 2026-05-23 05:28:32,590 INFO: Получено сообщение: key=33, value='Сообщение 33', offset=13
-producer-1         | Сообщение доставлено в топик my-topic и партицию 1
-single-consumer-2  | 2026-05-23 05:28:33,612 INFO: Получено сообщение: key=34, value='Сообщение 34', offset=11
-producer-1         | Сообщение доставлено в топик my-topic и партицию 2
-user@ubuntu:~/app$
+single-consumer-1  | 2026-05-24 13:47:43,044 INFO: Получено сообщение: key=26, value='Сообщение 26', offset=9
+batch-consumer-2   | 2026-05-24 13:47:43,048 INFO: Получено сообщение: key=1, value='Сообщение 1', offset=0
+batch-consumer-2   | 2026-05-24 13:47:43,048 INFO: Получено сообщение: key=3, value='Сообщение 3', offset=1
+batch-consumer-2   | 2026-05-24 13:47:43,048 INFO: Получено сообщение: key=5, value='Сообщение 5', offset=2
+batch-consumer-2   | 2026-05-24 13:47:43,048 INFO: Получено сообщение: key=7, value='Сообщение 7', offset=3
+batch-consumer-2   | 2026-05-24 13:47:43,049 INFO: Получено сообщение: key=9, value='Сообщение 9', offset=4
+batch-consumer-2   | 2026-05-24 13:47:43,049 INFO: Получено сообщение: key=14, value='Сообщение 14', offset=5
+batch-consumer-2   | 2026-05-24 13:47:43,049 INFO: Получено сообщение: key=17, value='Сообщение 17', offset=6
+batch-consumer-2   | 2026-05-24 13:47:43,049 INFO: Получено сообщение: key=19, value='Сообщение 19', offset=7
+batch-consumer-2   | 2026-05-24 13:47:43,049 INFO: Получено сообщение: key=25, value='Сообщение 25', offset=8
+batch-consumer-2   | 2026-05-24 13:47:43,056 INFO: Получено сообщение: key=26, value='Сообщение 26', offset=9
+batch-consumer-2   | 2026-05-24 13:47:43,076 INFO: Успешный коммит 10 сообщений
+
 
