@@ -58,7 +58,7 @@ try:
             value = serialized_value,
             on_delivery = delivery_report
         )
-        producer.flush()
+        producer.poll(0)
         i = i + 1
         time.sleep(1)
 except Exception as e:
@@ -66,4 +66,3 @@ except Exception as e:
 finally:
     # Ожидание завершения отправки всех сообщений
     producer.flush()
-

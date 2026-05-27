@@ -48,16 +48,16 @@ try:
         if msg is None:
             continue
         if msg.error():
-            loger.error(f"Ошибка: {msg.error()}")
+            logger.error(f"Ошибка: {msg.error()}")
             continue
 
-        #key = msg.key().decode("utf-8")
-        #value = msg.value().decode("utf-8")
         key = key_deserializer(msg.key(), SerializationContext(msg.topic(), MessageField.KEY))
         value = value_deserializer(msg.value(), SerializationContext(msg.topic(), MessageField.VALUE))
         logger.info(f"Получено сообщение: {key=}, {value=}, offset={msg.offset()}")
         # Ручной коммит после обработки сообщения
         consumer.commit(msg, asynchronous=False)
+except Exception as e:
+    logger.error(f"Произошла ошибка консьюмера: {e}")
 finally:
     # Закрытие консьюмера
     consumer.close()
